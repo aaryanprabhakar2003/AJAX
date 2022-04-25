@@ -23,14 +23,19 @@ function buttonClickHandler() {
         if (this.status === 200) {
             let obj = JSON.parse(this.responseText);
             console.log(obj);
-            console.log(`<li>$(obj.employee[0]).name</li>`);
+            //console.log(obj.employee[0].name);
 
             let lst = document.getElementById("list");
-            str = "";
+             str = "";
             for (key in obj.employee) {
-                str += `<li>$(obj.employee[0])</li>`;
+               // str += `<li>`+(obj.employee[key].name)+`</li>`;
+                if(obj.employee[key].age>35){
+                str += `<li>employee name:`+(obj.employee[key].name)+`</li>`;
+                str += `<li>employee age:`+(obj.employee[key].age)+`</li>`;
+                str += `<li>employee salary:`+(obj.employee[key].salary)+`</li><br>`;
+                
 
-
+                }
             }
             lst.innerHTML = str;
         }
