@@ -26,7 +26,7 @@ $(document).ready(function() {
                    
 
                 }
-                if(obj.employee[keys].name!==str&& obj.employee[keys].password!==str1){
+                if(obj.employee[keys].name!=str&& obj.employee[keys].password!=str1){
                     alert("INVALID CREDENTIALS")
                     
                 }

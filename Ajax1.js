@@ -28,14 +28,14 @@ function buttonClickHandler() {
             let lst = document.getElementById("list");
              str = "";
             for (key in obj.employee) {
-               // str += `<li>`+(obj.employee[key].name)+`</li>`;
-                if(obj.employee[key].age>35){
+                str += `<li>`+(obj.employee[key].name)+`</li>`;
+               /* if(obj.employee[key].age>35){
                 str += `<li>employee name:`+(obj.employee[key].name)+`</li>`;
                 str += `<li>employee age:`+(obj.employee[key].age)+`</li>`;
                 str += `<li>employee salary:`+(obj.employee[key].salary)+`</li><br>`;
                 
 
-                }
+                }*/
             }
             lst.innerHTML = str;
         }
